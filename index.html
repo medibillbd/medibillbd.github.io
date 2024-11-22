@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediBill</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/lgo.png"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="images/lgo.png" alt="Logo"> <!-- Replace with your logo link -->
+                <span>MediBill</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="login.html"><button class="btn-nav">Sign In</button></a></li>
+                <li><a href="registration.html"><button class="btn-nav">Register</button></a></li>
+                <li><a href="payment-form.html"><button class="btn-nav">PAYMENT</button></a></li>
+                <li><a href="past-due.html"><button class="btn-nav">Past-Due</button ></a></li>
+                <li><a href="#" id="contact-link"><button class="btn-nav">contact</button></a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+        </div>
+    </nav>          
+  
+    <div class="container">
+        <!-- Welcome Section -->
+        <section class="welcome">
+            <h1>Welcome to Medibill</h1>
+            <p>Trusted Solutions for Hassle-Free Medical Payments!</p>
+        </section>
+        <div id="services"></div>
+        <!-- Our Work Section -->
+        <section class="our-work">
+            <h2>Our Services</h2>
+            <p>We ensure that patients and families can focus on healing while we handle their hospital bills with ease.</p>
+            <div class="features">
+                <div class="feature-card">
+                    <h3>Fast Transactions</h3>
+                    <p>Quickly and securely transfer funds to hospitals, ensuring your loved ones get the care they need without delay.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>Reliable Service</h3>
+                    <p>Trusted by thousands for accurate and seamless transactions, ensuring your money reaches its destination on time.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>24/7 Support</h3>
+                    <p>Our support team is available around the clock to assist with any questions or issues you may have.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section class="about-us" id="about">
+            <h2>About Us</h2>
+            <p>At Medibill, we are dedicated to simplifying medical payments. Our mission is to provide a secure and efficient platform where families can handle medical expenses without stress. Together, we make healthcare more accessible.</p>
+        </section>
+    </div>
+
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>MediBill</h2>
+                <p>Your trusted platform for seamless fund transfers between banks and hospitals.</p>
+            </div>
+
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#" id="how-it-works-link">How It Works</a></li>
+                    <li><a href="#" id="faq-link">FAQs</a></li> <!-- FAQ link -->
+                </ul>
+            </div>
+
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p>Email: support@MediBill.com</p>
+                <p>Phone: +1 234 567 890</p>
+                <div class="social-media">
+                    <a href="#"><i class="fa-brands fa-square-facebook fb"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-whatsapp wt"></i></a>
+                    <a href="#"><i class="fa-brands fa-square-instagram ins"></i></a>
+                    <a href="#"><i class="fa-brands fa-linkedin ln"></i></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2024 MediBill. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- FAQs Modal -->
+    <div id="faq-modal" class="faq-modal">
+        <div class="faq-modal-content">
+            <h3>Frequently Asked Questions</h3>
+            <button id="close-modal">X</button>
+            <div class="faq-item">
+                <button class="faq-question">
+                    What is MediBill?
+                    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M1 4l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>MediBill is a platform that enables secure and seamless fund transfers from individuals to hospitals for medical bills, ensuring timely payments for urgent medical care.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    How do I transfer money?
+                    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M1 4l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>You can initiate a transfer through our secure website by linking your bank account, selecting the hospital, and entering the necessary payment details.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    Is my payment information secure?
+                    <svg class="dropdown-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M1 4l6 6 6-6" />
+                    </svg>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes, we use state-of-the-art encryption methods to ensure your payment and personal information is secure at all times.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Social Media Popup -->
+    <div id="social-popup" class="social-popup">
+                     <div class="social-popup-content">
+            <button id="close-popup">X</button>
+            <h3>Connect with Us</h3>
+            <div class="social-media">
+             <a href="https://facebook.com" target="_blank">
+                    <i class="fa-brands fa-square-facebook fb"></i>
+                </a>
+                <a href="https://whatsapp.com" target="_blank">
+                    <i class="fa-brands fa-square-whatsapp wt"></i>
+                </a>
+               <a href="https://instagram.com" target="_blank">
+                    <i class="fa-brands fa-square-instagram ins"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank">
+                        <i class="fa-brands fa-linkedin ln"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works Popup -->
+    <div id="how-it-works-popup" class="how-it-works-popup">
+        <div class="how-it-works-popup-content">
+            <button id="close-how-it-works-popup">X</button>
+            <h3>How MediBill Works</h3>
+            <p>MediBill is a simple platform designed to help individuals easily and securely transfer money to hospitals for medical expenses. Here's how it works:</p>
+            <ul>
+                <li><strong>Step 1:</strong> Sign up or log in to your MediBill account.</li>
+                <li><strong>Step 2:</strong> Link your bank account to the platform for easy transfers.</li>
+                <li><strong>Step 3:</strong> Select the hospital where your loved one is being treated.</li>
+                <li><strong>Step 4:</strong> Enter the amount to transfer and review the details.</li>
+                <li><strong>Step 5:</strong> Confirm the transfer, and your payment will be securely processed.</li>
+            </ul>
+            <p>Your funds will reach the hospital promptly, ensuring timely medical care for those in need!</p>
+        </div>
+    </div>
+
+    <script src="navbar.js"></script>
+    <script src="footer.js" defer></script>
+</body>
+</html>

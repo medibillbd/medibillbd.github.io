@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Past Due List - MediBill</title>
+  <link rel="stylesheet" href="past-due.css">
+  <link rel="stylesheet" href="login.css">
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+  <link rel="shortcut icon" type="image/x-icon" href="images/lgo.png"/>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+      <div class="navbar-container">
+          <a href="index.html" class="logo">
+              <img src="images/lgo.png" alt="Logo"> <!-- Replace with your logo link -->
+              <span>MediBill</span>
+          </a>
+          <a href="index.html"><button class="back-btn">Back</button></a>
+      </div>
+  </nav>    
+
+  
+      <main>
+          <section class="intro">
+              <h1>Past Due Payments</h1>
+              <p>Here is the list of overdue payments requiring attention. Please resolve them promptly.</p>
+          </section>
+  
+          <section class="payment-list">
+              <table>
+                  <thead>
+                      <tr>
+                          <th>Patient Name</th>
+                          <th>Due Amount</th>
+                          <th>Due Date</th>
+                          <th>Hospital</th>
+                          <th>Action</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>John Doe</td>
+                          <td>$500</td>
+                          <td>2024-11-15</td>
+                          <td>City Health Clinic</td>
+                          <td><a href="payment-form.html"><button>Pay Now</button></a></td>
+                      </tr>
+                      <tr>
+                          <td>Jane Smith</td>
+                          <td>$320</td>
+                          <td>2024-10-20</td>
+                          <td>General Hospital</td>
+                          <td><a href="payment-form.html"><button>Pay Now</button></a></td>
+                      </tr>
+                      <tr>
+                          <td>Richard Roe</td>
+                          <td>$250</td>
+                          <td>2024-11-05</td>
+                          <td>Community Care</td>
+                          <td><a href="payment-form.html"><button>Pay Now</button></a></td>
+                      </tr>
+                  </tbody>
+              </table>
+          </section>
+      </main>
+  
+  </body>
+  </html>
+  

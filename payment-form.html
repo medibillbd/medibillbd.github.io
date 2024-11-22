@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form - MediBill</title>
+    <link rel="stylesheet" href="payment-form.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/lgo.png"/>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="images/lgo.png" alt="Logo"> <!-- Replace with your logo link -->
+                <span>MediBill</span>
+            </a>
+            <a href="index.html"><button class="back-btn">Back</button></a>
+        </div>
+    </nav>    
+    <br>
+    <div class="form-container">
+        <h1>Make a Payment</h1>
+        <form>
+            <!-- Bank Selection -->
+            <label for="bank">Select Your Bank:</label>
+            <select id="bank" name="bank" required>
+                <option value="" disabled selected>Select a Bank</option>
+                <option value="hsbc">HSBC</option>
+                <option value="brac">BRAC Bank</option>
+                <option value="dbbl">Dutch-Bangla Bank</option>
+                <option value="citybank">City Bank</option>
+                <option value="standard">Standard Chartered Bank</option>
+                <option value="islami">Islami Bank Bangladesh Limited</option>
+                <option value="prime">Prime Bank</option>
+            </select>
+
+            <!-- Amount -->
+            <label for="amount">Enter Amount:</label>
+            <input type="number" id="amount" name="amount" placeholder="Enter amount" required>
+
+            <!-- Currency -->
+            <label for="currency">Currency:</label>
+            <select id="currency" name="currency" required>
+                <option value="bdt">BDT</option>
+                <option value="usd">USD</option>
+            </select>
+
+            <!-- Hospital/Clinic Selection -->
+            <label for="hospital">Transfer To:</label>
+            <select id="hospital" name="hospital" required>
+                <option value="" disabled selected>Select a Hospital/Clinic</option>
+                <option value="square">Square Hospital</option>
+                <option value="apollo">Evercare Hospital</option>
+                <option value="ibn-sina">Ibn Sina Hospital</option>
+                <option value="lab-aid">Lab Aid</option>
+                <option value="united">United Hospital</option>
+                <option value="popular">Popular Diagnostic Centre</option>
+            </select>
+
+            <!-- Note -->
+            <label for="reason">Reason for Payment:</label>
+            <textarea id="reason" name="reason" rows="4" placeholder="Enter the reason for this payment..." required></textarea>
+
+            <!-- Submit Button -->
+            <button class="sub-info" type="submit">Submit Payment</button>
+        </form>
+    </div>
+
+
+    <div id="custom-popup" class="popup">
+        <div class="popup-content">
+            <p>Your payment has been submitted successfully!</p>
+            <button id="home-btn">Go to Home</button>
+        </div>
+    </div>
+    
+    
+
+
+    <script>
+        const form = document.querySelector('form');
+        const popup = document.getElementById('custom-popup');
+        const homeBtn = document.getElementById('home-btn');
+    
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Prevent default form submission
+            popup.style.display = 'flex'; // Show the popup
+        });
+    
+        homeBtn.addEventListener('click', () => {
+            window.location.href = 'index.html'; // Redirect to the home page
+        });
+    </script>
+    
+    
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
+    <link rel="shortcut icon" type="image/x-icon" href="images/lgo.png"/>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">
+                <img src="images/lgo.png" alt="Logo"> <!-- Replace with your logo link -->
+                <span>MediBill</span>
+            </a>
+            <a href="index.html"><button class="back-btn">Back</button></a>
+        </div>
+    </nav>     
+    <br>   
+    <div class="form-container">
+        <h2>Patient Registration</h2>
+        <form id="registrationForm" action="#" method="post">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <label for="phone">Phone Number</label>
+            <input 
+            type="tel" 
+            id="phone" 
+            name="phone" 
+            placeholder="+8801XXXXXXXXX" 
+            pattern="\+8801[0-9]{9}" 
+            title="Phone number must start with +880 followed by 10 digits (e.g., +8801XXXXXXXXX)" 
+            required>
+
+            <label for="address">Address</label>
+            <textarea id="address" name="address" placeholder="Enter your address" required></textarea>
+
+            <label for="dob">Date of Birth</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required>
+
+            <button type="submit">Register</button>
+        </form>
+    </div>
+
+    <!-- Popup Modal -->
+    <div class="popup-overlay" id="popupOverlay">
+        <div class="popup">
+            <p>You have been successfully registered.</p>
+            <button id="closePopup">Go to Home</button>
+        </div>
+    </div>
+
+    <!-- JavaScript for Popup and Redirect -->
+    <script>
+        document.getElementById('registrationForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission to server
+            
+            // Show the popup
+            document.getElementById('popupOverlay').style.display = 'flex';
+
+            // Add event listener to close the popup and redirect
+            document.getElementById('closePopup').addEventListener('click', function() {
+                // Hide the popup
+                document.getElementById('popupOverlay').style.display = 'none';
+
+                // Redirect to the home page
+                window.location.href = 'index.html';
+            });
+        });
+    </script>
+</body>
+</html>
